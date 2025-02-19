@@ -1,1 +1,2 @@
 #moin
+print(1)
