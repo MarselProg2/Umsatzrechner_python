@@ -17,14 +17,10 @@ Ein einfacher Rechner zur Berechnung von Netto- und Bruttobeträgen für Kleinun
 ### Optionale Erweiterungen
 - Speicherfunktion für die letzten 2 Berechnungen
 - Export der Ergebnisse als CSV oder PDF
-- Addition mehrerer Positionen mit Zwischensummen
-- Gesamtsummenberechnung aller Positionen
-
 
 ## Verwendung
 1. Nettobetrag eingeben (nur positive Zahlen)
-2. Mehrwertsteuersatz auswählen (19%, 7%, 0%)
-3. Optional: Weitere Positionen hinzufügen
+2. Mehrwertsteuersatz  (19%)
 4. Berechnung starten
 5. Ergebnisse werden formatiert angezeigt
 6. Optional: Ergebnisse exportieren oder speichern
