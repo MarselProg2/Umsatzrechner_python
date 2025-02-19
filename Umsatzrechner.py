@@ -1,3 +1,6 @@
+import csv
+
+
 def umsatzrechner():
     berechnungen = []
     try:
@@ -34,7 +37,18 @@ def umsatzrechner():
                 reset = input("Wollen Sie noch eine Rechnung machen? (ja/nein)")
                 if reset.lower() != "ja":# lower macht die Eingabe klein
                     print("Auf Wiedersehen")
+                # CSV-Datei erst am Ende schreiben, wenn Berechnungen fertig sind
+                    with open("Rechnungen.csv", mode="w") as csvfile:
+                        fieldnames = berechnungen[0].keys()
+                        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                        writer.writeheader()  # Schreibt die Spaltenüberschriften
+                        for row in berechnungen:
+                            writer.writerow(row)
+                    
+                
                     break # Beendet die Schleife
+
+
             except ValueError:
                 print("Ungültige Eingabe: Bitte nur Zahlen verwenden")
 
